@@ -19,6 +19,18 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canSetName() {
+        developer.setName("Rea");
+        assertEquals("Rea", developer.getName());
+    }
+
+    @Test
+    public void newNameCannotBeNull() {
+        developer.setName(null);
+        assertEquals("Ria", developer.getName());
+    }
+
+    @Test
     public void canGetNINumber() {
         assertEquals("CD2000300GB", developer.getNumberNI());
     }
